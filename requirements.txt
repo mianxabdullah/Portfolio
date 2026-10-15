@@ -1,0 +1,9 @@
+# This project is a static HTML, CSS, and JavaScript website.
+# No Python dependencies are required.
+
+#The portfolio is built as a lightweight, responsive frontend using:
+#HTML5
+#CSS3
+#Vanilla JavaScript
+#Canvas API
+#SVG

@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abdullah Ayub — AI & Backend Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700;800&family=Sora:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&family=Space+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="nodeField" class="node-field" aria-hidden="true"></canvas>
+<div class="glow glow-a" aria-hidden="true"></div>
+<div class="glow glow-b" aria-hidden="true"></div>
+<div class="glow glow-d" aria-hidden="true"></div>
+<div class="glow glow-e" aria-hidden="true"></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav-wrap">
+  <nav class="nav">
+    <a href="#top" class="nav-logo">
+      <span class="logo-mark">AA</span>
+    </a>
+
+    <div class="nav-links" id="navLinks">
+      <a href="#capabilities" data-nav="capabilities">Capabilities</a>
+      <a href="#work" data-nav="work">Projects</a>
+      <a href="#dataviz" data-nav="dataviz">Data Visualization</a>
+      <a href="#process" data-nav="process">How I Build</a>
+      <a href="#background" data-nav="background">Background</a>
+      <a href="#contact" data-nav="contact">Contact</a>
+    </div>
+
+    <a href="#contact" class="btn btn-gradient btn-sm nav-cta">Let's talk</a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="status-chip reveal-up" style="--d:0"><span class="status-dot"></span> Available for opportunities</p>
+
+      <h1 class="hero-title reveal-up" style="--d:1">
+        Hi, I'm Abdullah —<br>
+        <span class="gradient-text">I build systems, not just demos.</span>
+      </h1>
+
+      <p class="hero-sub reveal-up" style="--d:2">
+        Data Science student at PUCIT with hands-on experience building
+        end-to-end AI and machine learning applications — ML pipelines,
+        backend APIs, RAG systems, and LLM-powered chatbots. I'd rather write
+        the SQL by hand than import an ORM, and I'm focused on shipping
+        deployable, portfolio-grade systems, not one-off notebooks.
+      </p>
+
+      <div class="hero-actions reveal-up" style="--d:3">
+        <a href="#work" class="btn btn-gradient">View my work</a>
+        <a href="#contact" class="btn btn-ghost">Get in touch</a>
+      </div>
+
+      <div class="stat-row reveal-up" style="--d:4">
+        <div class="stat-chip"><strong>30+</strong><span>repositories</span></div>
+        <div class="stat-chip"><strong>5</strong><span>shipped AI products</span></div>
+        <div class="stat-chip"><strong>PUCIT</strong><span>Lahore, Pakistan</span></div>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal-up" style="--d:2">
+      <div class="photo-card">
+        <img src="https://avatars.githubusercontent.com/u/219556469?v=4" alt="Abdullah Ayub" loading="eager">
+      </div>
+
+      <div class="orbit-badge" aria-hidden="true">
+        <svg viewBox="0 0 160 160" class="orbit-svg">
+          <defs>
+            <path id="orbitPath" d="M 80,80 m -62,0 a 62,62 0 1,1 124,0 a 62,62 0 1,1 -124,0"/>
+          </defs>
+          <circle cx="80" cy="80" r="62" class="orbit-ring"/>
+          <text class="orbit-text">
+            <textPath href="#orbitPath" startOffset="0%">
+              OPEN TO WORK • DATA SCIENCE • AI &amp; BACKEND •
+            </textPath>
+          </text>
+        </svg>
+        <span class="orbit-center">
+          <svg viewBox="0 0 24 24" class="icon"><path d="M12 2 L14 9 L21 11 L14 13 L12 20 L10 13 L3 11 L10 9 Z"/></svg>
+        </span>
+      </div>
+
+      <span class="float-shape shape-dot" aria-hidden="true"></span>
+      <span class="float-shape shape-ring" aria-hidden="true"></span>
+      <span class="float-shape shape-dot-2" aria-hidden="true"></span>
+    </div>
+  </section>
+
+  <!-- ============ CAPABILITIES ============ -->
+  <section id="capabilities" class="section">
+    <div class="section-head reveal-el">
+      <p class="eyebrow">02 / Capabilities</p>
+      <h2 class="section-title-lg">What I work with.</h2>
+    </div>
+
+    <div class="capabilities-grid">
+      <article class="cap-card reveal-el">
+        <span class="cap-num">01</span>
+        <h3>Data Science</h3>
+        <p>Data cleaning, EDA, feature engineering, statistical analysis, and visualization.</p>
+        <ul class="cap-tags">
+          <li>Python</li><li>Pandas</li><li>NumPy</li><li>Matplotlib</li>
+        </ul>
+      </article>
+
+      <article class="cap-card reveal-el">
+        <span class="cap-num">02</span>
+        <h3>Machine Learning</h3>
+        <p>Building, evaluating, and deploying models for prediction and recommendation.</p>
+        <ul class="cap-tags">
+          <li>Scikit-learn</li><li>Regression</li><li>Classification</li>
+        </ul>
+      </article>
+
+      <article class="cap-card reveal-el">
+        <span class="cap-num">03</span>
+        <h3>AI / GenAI</h3>
+        <p>RAG pipelines, embeddings, vector search, and LLM-powered applications.</p>
+        <ul class="cap-tags">
+          <li>LLMs</li><li>RAG</li><li>LangChain</li>
+        </ul>
+      </article>
+
+      <article class="cap-card reveal-el">
+        <span class="cap-num">04</span>
+        <h3>Backend</h3>
+        <p>Production-minded APIs and services that connect models to real applications.</p>
+        <ul class="cap-tags">
+          <li>FastAPI</li><li>PostgreSQL</li><li>Docker</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS & WORK ============ -->
+  <section id="work" class="section">
+    <div class="section-head reveal-el">
+      <p class="eyebrow">03 / Skills &amp; work</p>
+      <h2 class="section-title">What I can do, and the project that proves it</h2>
+    </div>
+
+    <!-- AI & RAG Systems -->
+    <div class="skill-block reveal-el">
+      <div class="skill-block-head">
+        <span class="card-icon icon-violet">
+          <svg viewBox="0 0 24 24" class="icon"><path d="M12 2 L14 9 L21 11 L14 13 L12 20 L10 13 L3 11 L10 9 Z"/></svg>
+        </span>
+        <div>
+          <h3>AI &amp; RAG Systems</h3>
+          <p>Chunking, embeddings, and vector search — built by hand, because "just use LangChain" teaches you nothing about why retrieval fails.</p>
+        </div>
+      </div>
+
+      <article class="card project-card reveal-el">
+        <div class="project-top">
+          <span class="tag tag-shipped">Shipped</span>
+          <a href="#" class="card-link-icon" aria-label="View repository">
+            <svg viewBox="0 0 24 24" class="icon"><path d="M7 17 L17 7 M8 7h9v9"/></svg>
+          </a>
+        </div>
+        <h3>blame</h3>
+        <div class="pipeline-visual">
+          <span class="pipeline-node"><svg viewBox="0 0 24 24" class="icon"><circle cx="12" cy="12" r="9"/><path d="M8 12h8 M12 8v8"/></svg>Repo URL</span>
+          <span class="pipeline-arrow">→</span>
+          <span class="pipeline-node"><svg viewBox="0 0 24 24" class="icon"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 4V2 M15 4V2 M9 22v-2 M15 22v-2 M4 9H2 M4 15H2 M22 9h-2 M22 15h-2"/></svg>Chunk + embed</span>
+          <span class="pipeline-arrow">→</span>
+          <span class="pipeline-node"><svg viewBox="0 0 24 24" class="icon"><path d="M4 20V10 M12 20V4 M20 20v-7"/></svg>Vector search</span>
+          <span class="pipeline-arrow">→</span>
+          <span class="pipeline-node"><svg viewBox="0 0 24 24" class="icon"><path d="M12 2 L14 9 L21 11 L14 13 L12 20 L10 13 L3 11 L10 9 Z"/></svg>Cited answer</span>
+        </div>
+        <p>Understanding an unfamiliar codebase means reading hundreds of files before you can ask one good question. blame skips that: paste a GitHub URL, ask in plain English, get an answer grounded in the actual retrieved code. Code embeddings and vector retrieval run on Sentence-Transformers, FAISS, and Supabase pgvector, surfaced through a Git-log-inspired interface for navigating what was retrieved.</p>
+        <ul class="tag-list">
+          <li>FastAPI</li><li>Sentence-Transformers</li><li>FAISS</li><li>Supabase pgvector</li>
+        </ul>
+      </article>
+
+      <article class="card project-card reveal-el">
+        <div class="project-top">
+          <span class="tag tag-live">Deployed</span>
+          <a href="https://github.com/mianxabdullah/RAG" target="_blank" rel="noopener" class="card-link-icon" aria-label="View repository">
+            <svg viewBox="0 0 24 24" class="icon"><path d="M7 17 L17 7 M8 7h9v9"/></svg>
+          </a>
+        </div>
+        <h3>RAG Chatbot</h3>
+        <div class="pipeline-visual">
+          <span class="pipeline-node"><svg viewBox="0 0 24 24" class="icon"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 4V2 M15 4V2 M9 22v-2 M15 22v-2 M4 9H2 M4 15H2 M22 9h-2 M22 15h-2"/></svg>PDF upload</span>
+          <span class="pipeline-arrow">→</span>
+          <span class="pipeline-node"><svg viewBox="0 0 24 24" class="icon"><path d="M4 20V10 M12 20V4 M20 20v-7"/></svg>Chunk + embed</span>
+          <span class="pipeline-arrow">→</span>
+          <span class="pipeline-node"><svg viewBox="0 0 24 24" class="icon"><circle cx="12" cy="12" r="9"/><path d="M8 12h8 M12 8v8"/></svg>Cosine retrieval</span>
+          <span class="pipeline-arrow">→</span>
+          <span class="pipeline-node"><svg viewBox="0 0 24 24" class="icon"><path d="M12 2 L14 9 L21 11 L14 13 L12 20 L10 13 L3 11 L10 9 Z"/></svg>Answer + source</span>
+        </div>
+        <p>Upload several PDFs at once, ask questions, get answers with the source document, page number, and relevance score attached. Text is chunked with overlap and embedded via Sentence-Transformers, retrieved by cosine similarity, and passed to Groq's Llama 3.1 with the last three exchanges kept in context. Deployed live on Hugging Face Spaces.</p>
+        <ul class="tag-list">
+          <li>Gradio</li><li>Sentence-Transformers</li><li>Scikit-learn</li><li>Groq</li>
+        </ul>
+      </article>
+
+      <article class="card project-card reveal-el">
+        <div class="project-top">
+          <span class="tag tag-live">Deployed</span>
+          <a href="https://github.com/mianxabdullah/Fitness_Chatbot" target="_blank" rel="noopener" class="card-link-icon" aria-label="View repository">
+            <svg viewBox="0 0 24 24" class="icon"><path d="M7 17 L17 7 M8 7h9v9"/></svg>
+          </a>
+        </div>
+        <h3>FitBuddy — Fitness Coach Chatbot</h3>
+        <div class="pipeline-visual">
+          <span class="pipeline-node"><svg viewBox="0 0 24 24" class="icon"><path d="M12 2 L14 9 L21 11 L14 13 L12 20 L10 13 L3 11 L10 9 Z"/></svg>Question + tone</span>
+          <span class="pipeline-arrow">→</span>
+          <span class="pipeline-node"><svg viewBox="0 0 24 24" class="icon"><circle cx="12" cy="12" r="9"/><path d="M8 12h8 M12 8v8"/></svg>Groq completion</span>
+          <span class="pipeline-arrow">→</span>
+          <span class="pipeline-node"><svg viewBox="0 0 24 24" class="icon"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 4V2 M15 4V2 M9 22v-2 M15 22v-2 M4 9H2 M4 15H2 M22 9h-2 M22 15h-2"/></svg>Tailored reply</span>
+        </div>
+        <p>A lightweight fitness assistant with a tone dial — Direct, Friendly, or Detailed — so the same question gets answered differently depending on how you want to hear it. Gradio UI wired to Groq's chat completions, deployed on Hugging Face Spaces with the API key held as a secret.</p>
+        <ul class="tag-list">
+          <li>Gradio</li><li>Groq</li><li>Hugging Face Spaces</li>
+        </ul>
+      </article>
+
+      <article class="card project-card reveal-el">
+        <div class="project-top">
+          <span class="tag tag-live">Deployed</span>
+          <a href="https://github.com/mianxabdullah/Orbit_AI" target="_blank" rel="noopener" class="card-link-icon" aria-label="View repository">
+            <svg viewBox="0 0 24 24" class="icon"><path d="M7 17 L17 7 M8 7h9v9"/></svg>
+          </a>
+        </div>
+        <h3>Orbit AI</h3>
+        <div class="pipeline-visual">
+          <span class="pipeline-node"><svg viewBox="0 0 24 24" class="icon"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 4V2 M15 4V2 M9 22v-2 M15 22v-2 M4 9H2 M4 15H2 M22 9h-2 M22 15h-2"/></svg>Message / file</span>
+          <span class="pipeline-arrow">→</span>
+          <span class="pipeline-node"><svg viewBox="0 0 24 24" class="icon"><path d="M12 2 L14 9 L21 11 L14 13 L12 20 L10 13 L3 11 L10 9 Z"/></svg>Groq streaming</span>
+          <span class="pipeline-arrow">→</span>
+          <span class="pipeline-node"><svg viewBox="0 0 24 24" class="icon"><circle cx="12" cy="12" r="9"/><path d="M8 12h8 M12 8v8"/></svg>Supabase history</span>
+        </div>
+        <p>A ChatGPT-style interface built to feel like a shipped product: streaming responses via Groq, persistent chat history in Supabase, document Q&A over uploaded PDFs, DOCX, and TXT files, auto-generated titles, and full chat management — search, pin, rename, delete with confirmation. Live on Streamlit Cloud.</p>
+        <ul class="tag-list">
+          <li>Streamlit</li><li>Groq</li><li>Supabase</li>
+        </ul>
+      </article>
+
+    </div>
+
+    <!-- Backend Engineering -->
+    <div class="skill-block reveal-el">
+      <div class="skill-block-head">
+        <span class="card-icon icon-mint">
+          <svg viewBox="0 0 24 24" class="icon"><rect x="3" y="4" width="18" height="6" rx="1.5"/><rect x="3" y="14" width="18" height="6" rx="1.5"/><circle cx="7" cy="7" r="0.8" fill="currentColor" stroke="none"/><circle cx="7" cy="17" r="0.8" fill="currentColor" stroke="none"/></svg>
+        </span>
+        <div>
+          <h3>Backend Engineering</h3>
+          <p>FastAPI services on parameterized raw SQL — no ORM standing between me and the query plan.</p>
+        </div>
+      </div>
+
+      <article class="card project-card reveal-el">
+        <div class="project-top">
+          <span class="tag tag-shipped">Shipped</span>
+          <a href="#" class="card-link-icon" aria-label="View repository">
+            <svg viewBox="0 0 24 24" class="icon"><path d="M7 17 L17 7 M8 7h9v9"/></svg>
+          </a>
+        </div>
+        <h3>CreditCall</h3>
+        <div class="pipeline-visual">
+          <span class="pipeline-node"><svg viewBox="0 0 24 24" class="icon"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 4V2 M15 4V2 M9 22v-2 M15 22v-2 M4 9H2 M4 15H2 M22 9h-2 M22 15h-2"/></svg>Applicant data</span>
+          <span class="pipeline-arrow">→</span>
+          <span class="pipeline-node"><svg viewBox="0 0 24 24" class="icon"><path d="M4 20V10 M12 20V4 M20 20v-7"/></svg>Weighted model</span>
+          <span class="pipeline-arrow">→</span>
+          <span class="pipeline-node"><svg viewBox="0 0 24 24" class="icon"><path d="M12 2 L14 9 L21 11 L14 13 L12 20 L10 13 L3 11 L10 9 Z"/></svg>Groq chatbot</span>
+          <span class="pipeline-arrow">→</span>
+          <span class="pipeline-node"><svg viewBox="0 0 24 24" class="icon"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>Decision</span>
+        </div>
+        <p>A loan-approval pipeline built the way a lender actually needs it: a logistic regression model weighted to minimize false approvals, since approving a bad loan costs more than rejecting a good one. Applicant, prediction, and persistent chat-session workflows run on PostgreSQL, SQLAlchemy, and Pydantic, with a Groq chatbot that can call tools and hold a real conversation about an application — all containerized with Docker.</p>
+        <ul class="tag-list">
+          <li>FastAPI</li><li>PostgreSQL</li><li>Scikit-learn</li><li>Groq</li><li>SQLAlchemy</li><li>Docker</li>
+        </ul>
+      </article>
+
+      <article class="card project-card reveal-el">
+        <div class="project-top">
+          <span class="tag tag-shipped">Shipped</span>
+          <a href="https://github.com/mianxabdullah/Food_Delivery_Management_System" target="_blank" rel="noopener" class="card-link-icon" aria-label="View repository">
+            <svg viewBox="0 0 24 24" class="icon"><path d="M7 17 L17 7 M8 7h9v9"/></svg>
+          </a>
+        </div>
+        <h3>Food Delivery Management System</h3>
+        <div class="pipeline-visual">
+          <span class="pipeline-node"><svg viewBox="0 0 24 24" class="icon"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 4V2 M15 4V2 M9 22v-2 M15 22v-2 M4 9H2 M4 15H2 M22 9h-2 M22 15h-2"/></svg>Customer order</span>
+          <span class="pipeline-arrow">→</span>
+          <span class="pipeline-node"><svg viewBox="0 0 24 24" class="icon"><circle cx="12" cy="12" r="9"/><path d="M8 12h8 M12 8v8"/></svg>Restaurant + payment</span>
+          <span class="pipeline-arrow">→</span>
+          <span class="pipeline-node"><svg viewBox="0 0 24 24" class="icon"><path d="M4 20V10 M12 20V4 M20 20v-7"/></svg>Delivery + review</span>
+        </div>
+        <p>A full-stack system modeling a real delivery platform: customers, restaurants, menus, orders, payments, delivery agents, and a review system where a CHECK constraint enforces that each review targets exactly one entity. Properly normalized PostgreSQL schema with an ERD behind it, served through a Flask app with a dashboard and revenue analytics.</p>
+        <ul class="tag-list">
+          <li>Flask</li><li>PostgreSQL</li><li>Bootstrap</li>
+        </ul>
+      </article>
+
+      <article class="card project-card reveal-el">
+        <div class="project-top">
+          <span class="tag tag-shipped">Shipped</span>
+          <a href="https://github.com/mianxabdullah/House_Pricing_API" target="_blank" rel="noopener" class="card-link-icon" aria-label="View repository">
+            <svg viewBox="0 0 24 24" class="icon"><path d="M7 17 L17 7 M8 7h9v9"/></svg>
+          </a>
+        </div>
+        <h3>House Price Prediction API</h3>
+        <div class="stat-visual">
+          <div>
+            <p class="stat-visual-label">Avg. prediction error</p>
+            <p class="stat-visual-num">±$25.6K</p>
+          </div>
+          <div class="mini-bars">
+            <span style="height:80%"></span><span style="height:45%"></span><span style="height:65%"></span>
+            <span style="height:30%"></span><span style="height:55%"></span>
+          </div>
+        </div>
+        <p>A RESTful FastAPI service wrapping a Random Forest Regressor trained on the California Housing dataset — average prediction error of ±$25,602. Supports single and batch (CSV) predictions with Pydantic-validated inputs, model-info and health-check endpoints, and interactive Swagger/ReDoc docs out of the box.</p>
+        <ul class="tag-list">
+          <li>FastAPI</li><li>Pydantic</li><li>Scikit-learn</li><li>Pandas</li>
+        </ul>
+      </article>
+
+      <div class="proof-chips">
+        <a href="#" class="proof-chip">blame <span class="muted">— FastAPI service layer</span> <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+
+    <!-- Machine Learning -->
+    <div class="skill-block reveal-el">
+      <div class="skill-block-head">
+        <span class="card-icon icon-pink">
+          <svg viewBox="0 0 24 24" class="icon"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 4V2 M15 4V2 M9 22v-2 M15 22v-2 M4 9H2 M4 15H2 M22 9h-2 M22 15h-2"/></svg>
+        </span>
+        <div>
+          <h3>Machine Learning</h3>
+          <p>Models scored against the failure mode that actually costs something, not just accuracy on a leaderboard.</p>
+        </div>
+      </div>
+
+      <article class="card project-card reveal-el">
+        <div class="project-top">
+          <span class="tag tag-explore">Analysis</span>
+          <a href="https://github.com/mianxabdullah/Cricket_Batsman_Stats_Prediction" target="_blank" rel="noopener" class="card-link-icon" aria-label="View repository">
+            <svg viewBox="0 0 24 24" class="icon"><path d="M7 17 L17 7 M8 7h9v9"/></svg>
+          </a>
+        </div>
+        <h3>Cricket Batsman Stats Prediction</h3>
+        <div class="stat-visual">
+          <div>
+            <p class="stat-visual-label">Batting records analyzed</p>
+            <p class="stat-visual-num">52K+</p>
+          </div>
+          <div class="mini-bars">
+            <span style="height:40%"></span><span style="height:65%"></span><span style="height:50%"></span>
+            <span style="height:80%"></span><span style="height:60%"></span><span style="height:90%"></span>
+          </div>
+        </div>
+        <p>52,000+ international batting records, analyzed for performance trends across formats, opponents, venues, and recent form. Historical match data is turned into engineered features feeding a Scikit-learn score-prediction model, with player-level analysis and predictions delivered through an interactive Streamlit dashboard.</p>
+        <ul class="tag-list">
+          <li>Python</li><li>Pandas</li><li>NumPy</li><li>Scikit-learn</li><li>Streamlit</li>
+        </ul>
+      </article>
+
+      <article class="card project-card reveal-el">
+        <div class="project-top">
+          <span class="tag tag-explore">Analysis</span>
+          <a href="https://github.com/mianxabdullah/Customer_Churn_Predictor" target="_blank" rel="noopener" class="card-link-icon" aria-label="View repository">
+            <svg viewBox="0 0 24 24" class="icon"><path d="M7 17 L17 7 M8 7h9v9"/></svg>
+          </a>
+        </div>
+        <h3>Customer Churn Predictor</h3>
+        <div class="stat-visual">
+          <div>
+            <p class="stat-visual-label">Chosen model — recall</p>
+            <p class="stat-visual-num">80%</p>
+          </div>
+          <div class="mini-bars">
+            <span style="height:55%"></span><span style="height:70%"></span><span style="height:50%"></span>
+            <span style="height:79%"></span><span style="height:100%"></span><span style="height:60%"></span>
+          </div>
+        </div>
+        <p>Three models compared on 7,032 telecom customers: Logistic Regression, Random Forest, and Decision Tree. Random Forest won on raw accuracy (79%), but Logistic Regression was chosen instead for its 80% recall — because missing a customer who's about to churn costs more than a false alarm. Feature importance confirmed contract length and tenure as the strongest churn signals.</p>
+        <ul class="tag-list">
+          <li>Scikit-learn</li><li>Pandas</li><li>Matplotlib</li>
+        </ul>
+      </article>
+
+      <article class="card project-card reveal-el">
+        <div class="project-top">
+          <span class="tag tag-explore">Analysis</span>
+          <a href="https://github.com/mianxabdullah/Car_Price_Analysis" target="_blank" rel="noopener" class="card-link-icon" aria-label="View repository">
+            <svg viewBox="0 0 24 24" class="icon"><path d="M7 17 L17 7 M8 7h9v9"/></svg>
+          </a>
+        </div>
+        <h3>Car Price Analysis</h3>
+        <div class="pipeline-visual">
+          <span class="pipeline-node"><svg viewBox="0 0 24 24" class="icon"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 4V2 M15 4V2 M9 22v-2 M15 22v-2 M4 9H2 M4 15H2 M22 9h-2 M22 15h-2"/></svg>Clean + engineer</span>
+          <span class="pipeline-arrow">→</span>
+          <span class="pipeline-node"><svg viewBox="0 0 24 24" class="icon"><path d="M4 20V10 M12 20V4 M20 20v-7"/></svg>6 models compared</span>
+          <span class="pipeline-arrow">→</span>
+          <span class="pipeline-node"><svg viewBox="0 0 24 24" class="icon"><circle cx="12" cy="12" r="9"/><path d="M8 12h8 M12 8v8"/></svg>Best model saved</span>
+        </div>
+        <p>A full regression pipeline, not just a single model: Linear, Ridge, and Lasso Regression, Random Forest, Gradient Boosting, and SVR are all trained and compared on the same engineered features (car age, annual mileage, feature interactions), validated with 5-fold cross-validation across R², RMSE, and MAE before the best performer is saved.</p>
+        <ul class="tag-list">
+          <li>Python</li><li>Pandas</li><li>Scikit-learn</li><li>Matplotlib</li>
+        </ul>
+      </article>
+
+      <article class="card project-card reveal-el">
+        <div class="project-top">
+          <span class="tag tag-explore">Analysis</span>
+          <a href="https://github.com/mianxabdullah/Movie_Recommendation_System" target="_blank" rel="noopener" class="card-link-icon" aria-label="View repository">
+            <svg viewBox="0 0 24 24" class="icon"><path d="M7 17 L17 7 M8 7h9v9"/></svg>
+          </a>
+        </div>
+        <h3>Movie Recommendation System</h3>
+        <div class="stat-visual">
+          <div>
+            <p class="stat-visual-label">PCA variance retained</p>
+            <p class="stat-visual-num">95%</p>
+          </div>
+          <div class="mini-bars">
+            <span style="height:35%"></span><span style="height:60%"></span><span style="height:85%"></span>
+            <span style="height:95%"></span><span style="height:95%"></span>
+          </div>
+        </div>
+        <p>An unsupervised approach to recommendations: features are standardized and reduced with PCA (95% variance retained), clustered with K-Means validated by the elbow method and silhouette score, then matched within a cluster by cosine similarity — all wrapped in an interactive Streamlit app.</p>
+        <ul class="tag-list">
+          <li>Scikit-learn</li><li>PCA</li><li>K-Means</li><li>Streamlit</li>
+        </ul>
+      </article>
+
+      <article class="card project-card reveal-el">
+        <div class="project-top">
+          <span class="tag tag-explore">Analysis</span>
+          <a href="https://github.com/mianxabdullah/Unemployment_Rate_Analysis" target="_blank" rel="noopener" class="card-link-icon" aria-label="View repository">
+            <svg viewBox="0 0 24 24" class="icon"><path d="M7 17 L17 7 M8 7h9v9"/></svg>
+          </a>
+        </div>
+        <h3>Unemployment Rate Analysis</h3>
+        <div class="stat-visual">
+          <div>
+            <p class="stat-visual-label">Period analyzed</p>
+            <p class="stat-visual-num">19 months</p>
+          </div>
+          <div class="mini-bars">
+            <span style="height:35%"></span><span style="height:40%"></span><span style="height:38%"></span>
+            <span style="height:100%"></span><span style="height:70%"></span><span style="height:50%"></span>
+          </div>
+        </div>
+        <p>A modular Python pipeline analyzing unemployment in India from May 2019 to November 2020 — isolating the COVID-19 lockdown spike, seasonal cycles, and regional disparities using statsmodels, structured as separate loading, cleaning, and analysis modules rather than one long notebook.</p>
+        <ul class="tag-list">
+          <li>Pandas</li><li>Statsmodels</li><li>Matplotlib</li><li>Seaborn</li>
+        </ul>
+      </article>
+
+      <div class="proof-chips">
+        <a href="#" class="proof-chip">CreditCall <span class="muted">— weighted logistic regression</span> <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+
+    <p class="more-link reveal-el">
+      <a href="https://github.com/mianxabdullah?tab=repositories" target="_blank" rel="noopener">See all 30+ repositories on GitHub <span aria-hidden="true">↗</span></a>
+    </p>
+  </section>
+
+  <!-- ============ DATA VISUALIZATION ============ -->
+  <section id="dataviz" class="section">
+    <div class="section-head reveal-el">
+      <p class="eyebrow">04 / Data Visualization</p>
+      <h2 class="section-title">Turning raw data into a clear story</h2>
+    </div>
+
+    <div class="bento dataviz-bento">
+      <article class="card reveal-el">
+        <span class="card-icon icon-cyan">
+          <svg viewBox="0 0 24 24" class="icon"><path d="M4 20V10 M12 20V4 M20 20v-7"/></svg>
+        </span>
+        <div class="project-top">
+          <span class="tag tag-shipped">Multi-page</span>
+          <a href="https://github.com/mianxabdullah/Netfilix_Dashboard" target="_blank" rel="noopener" class="card-link-icon" aria-label="View repository">
+            <svg viewBox="0 0 24 24" class="icon"><path d="M7 17 L17 7 M8 7h9v9"/></svg>
+          </a>
+        </div>
+        <h3>Netflix Content Analytics</h3>
+        <div class="insight-tags">
+          <p class="insight-tags-label">Key findings</p>
+          <div class="insight-chip-row">
+            <span class="insight-chip">Growth accelerated post-2015</span>
+            <span class="insight-chip">Drama leads genre share</span>
+            <span class="insight-chip">US = largest content share</span>
+          </div>
+        </div>
+        <p>A 3-page Power BI dashboard on Netflix's catalog — executive overview, content analysis, and cast/director insights — built with Power Query cleaning and custom DAX measures, styled in a Netflix-branded theme.</p>
+        <ul class="tag-list">
+          <li>Power BI</li><li>Power Query</li><li>DAX</li>
+        </ul>
+      </article>
+
+      <article class="card reveal-el">
+        <span class="card-icon icon-mint">
+          <svg viewBox="0 0 24 24" class="icon"><path d="M4 20V10 M12 20V4 M20 20v-7"/></svg>
+        </span>
+        <div class="project-top">
+          <span class="tag tag-explore">~114k rows</span>
+          <a href="https://github.com/mianxabdullah?tab=repositories" target="_blank" rel="noopener" class="card-link-icon" aria-label="View repository">
+            <svg viewBox="0 0 24 24" class="icon"><path d="M7 17 L17 7 M8 7h9v9"/></svg>
+          </a>
+        </div>
+        <h3>Spotify Track Popularity</h3>
+        <div class="stat-visual">
+          <div>
+            <p class="stat-visual-label">Tracks analyzed</p>
+            <p class="stat-visual-num">~114K</p>
+          </div>
+          <div class="mini-bars">
+            <span style="height:45%"></span><span style="height:70%"></span><span style="height:55%"></span>
+            <span style="height:90%"></span><span style="height:65%"></span>
+          </div>
+        </div>
+        <p>A structured exploration of ~114,000 tracks asking one question: what actually makes a track popular? Univariate, bivariate, categorical, and faceted plots in seaborn build toward an answer instead of just cataloguing every column.</p>
+        <ul class="tag-list">
+          <li>Pandas</li><li>Seaborn</li>
+        </ul>
+      </article>
+
+      <article class="card reveal-el">
+        <span class="card-icon icon-amber">
+          <svg viewBox="0 0 24 24" class="icon"><path d="M4 20V10 M12 20V4 M20 20v-7"/></svg>
+        </span>
+        <div class="project-top">
+          <span class="tag tag-explore">Dashboard</span>
+          <a href="https://github.com/mianxabdullah?tab=repositories" target="_blank" rel="noopener" class="card-link-icon" aria-label="View repository">
+            <svg viewBox="0 0 24 24" class="icon"><path d="M7 17 L17 7 M8 7h9v9"/></svg>
+          </a>
+        </div>
+        <h3>E-commerce Sales Dashboard</h3>
+        <div class="pipeline-visual">
+          <span class="pipeline-node"><svg viewBox="0 0 24 24" class="icon"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 4V2 M15 4V2 M9 22v-2 M15 22v-2 M4 9H2 M4 15H2 M22 9h-2 M22 15h-2"/></svg>Raw sales data</span>
+          <span class="pipeline-arrow">→</span>
+          <span class="pipeline-node"><svg viewBox="0 0 24 24" class="icon"><path d="M4 20V10 M12 20V4 M20 20v-7"/></svg>Per-metric charts</span>
+          <span class="pipeline-arrow">→</span>
+          <span class="pipeline-node"><svg viewBox="0 0 24 24" class="icon"><circle cx="12" cy="12" r="9"/><path d="M8 12h8 M12 8v8"/></svg>Composited panel</span>
+        </div>
+        <p>A composited multi-panel dashboard built in matplotlib, with PIL used to assemble individual charts into a single cohesive panel — deliberate subplot spacing and visual hierarchy instead of a default grid dump.</p>
+        <ul class="tag-list">
+          <li>Pandas</li><li>Matplotlib</li><li>PIL</li>
+        </ul>
+      </article>
+
+      <article class="card reveal-el">
+        <span class="card-icon icon-violet">
+          <svg viewBox="0 0 24 24" class="icon"><path d="M4 20V10 M12 20V4 M20 20v-7"/></svg>
+        </span>
+        <div class="project-top">
+          <span class="tag tag-shipped">8,100+ records</span>
+          <a href="https://github.com/mianxabdullah/Laboratory_Dashboard" target="_blank" rel="noopener" class="card-link-icon" aria-label="View repository">
+            <svg viewBox="0 0 24 24" class="icon"><path d="M7 17 L17 7 M8 7h9v9"/></svg>
+          </a>
+        </div>
+        <h3>Laboratory Operations Dashboard</h3>
+        <div class="stat-visual">
+          <div>
+            <p class="stat-visual-label">Patient records tracked</p>
+            <p class="stat-visual-num">8,100+</p>
+          </div>
+          <div class="mini-bars">
+            <span style="height:50%"></span><span style="height:75%"></span><span style="height:40%"></span>
+            <span style="height:85%"></span><span style="height:60%"></span><span style="height:95%"></span>
+          </div>
+        </div>
+        <p>A 3-page Power BI dashboard tracking a clinical sample's full lifecycle — requisition, collection, processing, validation — across 8,100+ patient records. Custom DAX measures calculate turnaround time between each stage, surfacing exactly where samples pile up, alongside specimen and demographic breakdowns.</p>
+        <ul class="tag-list">
+          <li>Power BI</li><li>Power Query</li><li>DAX</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ PROCESS ============ -->
+  <section id="process" class="section">
+    <div class="section-head reveal-el">
+      <p class="eyebrow">05 / How I build</p>
+      <h2 class="section-title">From dataset to deployed system</h2>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-step reveal-el">
+        <span class="step-num">01</span>
+        <h4>Understand</h4>
+        <p>Define the real problem and the metric that matters before touching code.</p>
+      </div>
+      <div class="timeline-step reveal-el">
+        <span class="step-num">02</span>
+        <h4>Build raw</h4>
+        <p>Implement the core logic by hand — embeddings, SQL, the model — before reaching for a wrapper.</p>
+      </div>
+      <div class="timeline-step reveal-el">
+        <span class="step-num">03</span>
+        <h4>Validate</h4>
+        <p>Test against real data and edge cases, not just the happy path.</p>
+      </div>
+      <div class="timeline-step reveal-el">
+        <span class="step-num">04</span>
+        <h4>Ship</h4>
+        <p>Containerize, document, deploy — a project isn't done until someone else could run it.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EDUCATION & EXPERIENCE ============ -->
+  <section id="background" class="section">
+    <div class="section-head reveal-el">
+      <p class="eyebrow">06 / Background</p>
+      <h2 class="section-title">Education &amp; experience</h2>
+    </div>
+
+    <div class="bento background-bento">
+      <article class="card reveal-el">
+        <span class="card-icon icon-violet">
+          <svg viewBox="0 0 24 24" class="icon"><path d="M12 3 2 8l10 5 10-5-10-5Z"/><path d="M6 10.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-5.5"/></svg>
+        </span>
+        <h3>Education</h3>
+        <div class="entry">
+          <div class="entry-head">
+            <strong>BS, Data Science</strong>
+            <span class="entry-date">09/2024 – Present</span>
+          </div>
+          <p class="entry-org">PUCIT, Lahore · 3rd-year student</p>
+          <p>CGPA <strong>3.87/4.00</strong>. Strong foundation in Statistics, Machine Learning, and Data Visualization.</p>
+        </div>
+        <div class="entry">
+          <div class="entry-head">
+            <strong>Intermediate (ICS), Computer Science</strong>
+            <span class="entry-date">07/2022 – 06/2024</span>
+          </div>
+          <p class="entry-org">Forman Christian College, Lahore</p>
+          <p>Secured 90% (A+ grade) with a major in Mathematics, Physics, and Computer Science.</p>
+        </div>
+      </article>
+
+      <article class="card reveal-el">
+        <span class="card-icon icon-mint">
+          <svg viewBox="0 0 24 24" class="icon"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </span>
+        <h3>Experience</h3>
+        <div class="entry">
+          <div class="entry-head">
+            <strong>Teaching Assistant — Digital Logic Design</strong>
+            <span class="entry-date">02/2026 – 06/2026</span>
+          </div>
+          <p class="entry-org">PUCIT, Lahore</p>
+          <p>Assisted 50+ students with digital logic concepts, circuit design, and lab exercises — guiding problem-solving and debugging during lab sessions.</p>
+        </div>
+        <div class="entry">
+          <div class="entry-head">
+            <strong>Teaching Assistant — Programming Fundamentals</strong>
+            <span class="entry-date">09/2025 – 02/2026</span>
+          </div>
+          <p class="entry-org">PUCIT, Lahore</p>
+          <p>Facilitated lab sessions and coursework for 50+ students, focusing on core logic and problem-solving. <span class="muted">(Concluded.)</span></p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="section contact-section">
+    <div class="contact-card reveal-el">
+      <div class="contact-glow" aria-hidden="true"></div>
+      <p class="eyebrow">07 / Get in touch</p>
+      <h2 class="section-title">Let's build something great</h2>
+      <p class="contact-sub">Open to internships, collaborations, and interesting problems worth solving.</p>
+
+      <div class="contact-links">
+        <a href="mailto:mian.abdullah.ayub@gmail.com" class="pill-link">
+          <svg viewBox="0 0 24 24" class="icon"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          mian.abdullah.ayub@gmail.com
+        </a>
+        <a href="tel:+923094993135" class="pill-link">
+          <svg viewBox="0 0 24 24" class="icon"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+          +92 309 4993135
+        </a>
+        <a href="https://github.com/mianxabdullah" target="_blank" rel="noopener" class="pill-link">
+          <svg viewBox="0 0 24 24" class="icon"><circle cx="12" cy="12" r="9"/><path d="M8 12h8 M12 8v8"/></svg>
+          github.com/mianxabdullah
+        </a>
+        <a href="https://www.linkedin.com/in/mianxabdullah" target="_blank" rel="noopener" class="pill-link">
+          <svg viewBox="0 0 24 24" class="icon"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v6 M8 7.5v.01 M12 16v-3.5a2 2 0 0 1 4 0V16 M12 16v-6"/></svg>
+          in/mianxabdullah
+        </a>
+      </div>
+
+      <p class="contact-loc">
+        <svg viewBox="0 0 24 24" class="icon icon-inline"><path d="M12 21s7-6.5 7-11.5A7 7 0 0 0 5 9.5C5 14.5 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.3"/></svg>
+        Lahore, Pakistan
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-inner">
+      <a href="#top" class="footer-logo"><span class="logo-mark">AA</span> Abdullah Ayub</a>
+
+      <nav class="footer-links">
+        <a href="#capabilities">Capabilities</a>
+        <a href="#work">Projects</a>
+        <a href="#dataviz">Data Visualization</a>
+        <a href="#process">How I Build</a>
+        <a href="#background">Background</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="footer-socials">
+        <a href="https://github.com/mianxabdullah" target="_blank" rel="noopener" aria-label="GitHub" class="footer-icon">
+          <svg viewBox="0 0 24 24" class="icon"><circle cx="12" cy="12" r="9"/><path d="M8 12h8 M12 8v8"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/mianxabdullah" target="_blank" rel="noopener" aria-label="LinkedIn" class="footer-icon">
+          <svg viewBox="0 0 24 24" class="icon"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v6 M8 7.5v.01 M12 16v-3.5a2 2 0 0 1 4 0V16 M12 16v-6"/></svg>
+        </a>
+        <a href="mailto:mian.abdullah.ayub@gmail.com" aria-label="Email" class="footer-icon">
+          <svg viewBox="0 0 24 24" class="icon"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+        </a>
+      </div>
+
+      <a href="#top" class="footer-top">Back to top <span aria-hidden="true">↑</span></a>
+    </div>
+
+    <p class="footer-copy">© 2026 Abdullah Ayub — built layer by layer, no template.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
